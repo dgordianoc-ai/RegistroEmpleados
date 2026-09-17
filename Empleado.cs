@@ -14,7 +14,7 @@
 
         public override string ToString()
         {
-            return $"{Id,-3} {Nombre,-20} Q {SalarioBase,10:N2} {HorasExtra,-6} Q {PagoTotal(),12:N2}";
+            return $"{Id,-3} {Nombre,-20} Q {PagoTotal(),10:N2}";
         }
     }
 }

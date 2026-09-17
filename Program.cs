@@ -4,10 +4,6 @@
     {
         public static void Main(string[] args)
         {
-            // ============================================================
-            // Registro de Empleados
-            // ============================================================
-
             string opcion;
             List<Empleado> empleados = new List<Empleado>();
             int siguienteId = 1;
@@ -39,16 +35,12 @@
                         break;
 
                     default:
-                        Console.WriteLine("Opción no válida.");
+                        Console.WriteLine("Opción no válida; vuelva al menú.");
                         break;
                 }
             }
             while (opcion != "5");
         }
-
-        // ============================================================
-        // Método para mostrar el menú
-        // ============================================================
 
         private static string LeerOpcionMenu()
         {
@@ -63,10 +55,6 @@
 
             return Console.ReadLine();
         }
-
-        // ============================================================
-        // Agregar empleado
-        // ============================================================
 
         private static void AgregarEmpleado(List<Empleado> empleados, ref int id)
         {
@@ -101,14 +89,11 @@
                 HorasExtra = horasExtra
             });
 
-            id++;
-
             Console.WriteLine("Empleado agregado.");
-        }
+            Console.WriteLine($"Pago total = Q {empleados[empleados.Count - 1].PagoTotal():N2}");
 
-        // ============================================================
-        // Listar empleados
-        // ============================================================
+            id++;
+        }
 
         private static void ListarEmpleados(List<Empleado> empleados)
         {
@@ -120,9 +105,6 @@
 
             decimal totalGeneral = 0;
 
-            Console.WriteLine(
-                $"{"Id",-3} {"Nombre",-20} {"Salario",10} {"Horas",-6} {"Pago Total",12}");
-
             foreach (Empleado e in empleados)
             {
                 Console.WriteLine(e);
@@ -132,10 +114,6 @@
             Console.WriteLine();
             Console.WriteLine($"TOTAL DE NÓMINA: Q {totalGeneral:N2}");
         }
-
-        // ============================================================
-        // Buscar empleado
-        // ============================================================
 
         private static void BuscarEmpleado(List<Empleado> empleados)
         {
@@ -159,10 +137,6 @@
                 Console.WriteLine("Sin coincidencias.");
             }
         }
-
-        // ============================================================
-        // Calcular factorial
-        // ============================================================
 
         private static void CalcularFactorial()
         {
