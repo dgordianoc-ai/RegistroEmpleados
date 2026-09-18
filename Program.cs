@@ -35,7 +35,7 @@
                         break;
 
                     default:
-                        Console.WriteLine("Opción no válida; vuelva al menú.");
+                        Console.WriteLine("Opción no válida. ");
                         break;
                 }
             }
