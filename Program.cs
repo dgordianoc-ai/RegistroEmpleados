@@ -35,7 +35,7 @@
                         break;
 
                     default:
-                        Console.WriteLine("Opción no válida. ");
+                        Console.WriteLine("Opción no válida; vuelva al menú.");
                         break;
                 }
             }
@@ -89,10 +89,9 @@
                 HorasExtra = horasExtra
             });
 
-            Console.WriteLine("Empleado agregado.");
-            Console.WriteLine($"Pago total = Q {empleados[empleados.Count - 1].PagoTotal():N2}");
-
             id++;
+
+            Console.WriteLine("Empleado agregado.");
         }
 
         private static void ListarEmpleados(List<Empleado> empleados)
