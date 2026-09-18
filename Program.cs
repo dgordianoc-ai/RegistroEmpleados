@@ -104,6 +104,9 @@
 
             decimal totalGeneral = 0;
 
+            Console.WriteLine(
+                $"{"Id",-3} {"Nombre",-20} {"Salario",10} {"Horas",-6} {"Pago Total",12}");
+
             foreach (Empleado e in empleados)
             {
                 Console.WriteLine(e);
